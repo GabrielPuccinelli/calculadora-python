@@ -10,7 +10,7 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        return "Erro: Divisao por zero"  # Mensagem em português
+        return "Erro: Divisao por zero não é possível"  # Mensagem em português
     return a / b
 
 if __name__ == "__main__":
