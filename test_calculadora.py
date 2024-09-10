@@ -12,4 +12,4 @@ def test_multiply():
 
 def test_divide():
     assert divide(6, 2) == 3
-    assert divide(6, 0) == "Erro: Divisao por zero"
+    assert divide(6, 0) == "Error: Division by zero"  # Mensagem em inglês
