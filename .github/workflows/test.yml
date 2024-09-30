@@ -11,4 +11,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            O evento ${{ github.event_name }} foi concluído com sucesso.
+            O evento ${{ github.event_name }} com ID ${{ github.ref }} foi concluído com sucesso.
