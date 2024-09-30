@@ -1,4 +1,4 @@
-name: Telegram Alerts on Commit or Merge
+name: Telegram Notification
 
 on:
   push:
@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send message to Telegram
+    - name: Enviar mensagem para o Telegram
+      run: |
+        curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage \
+        -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
+        -d text="🚀 Um novo commit ou pull request foi feito na branch main do repositório Calculadora-Python!"
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d chat_id=${TELEGRAM_CHAT_ID} -d text="🚀 A new commit or PR has been made to the main branch in the repository!"
