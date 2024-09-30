@@ -1,2 +1,2 @@
-# calculadora-python
-#test envio telegram somativa2
+# Calculadora Python
+Este projeto agora possui integração com o Telegram!
